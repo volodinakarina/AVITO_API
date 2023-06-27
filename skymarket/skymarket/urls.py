@@ -10,9 +10,6 @@ urlpatterns = [
     path("api/admin/", admin.site.urls),
     path("api/redoc-tasks/", include("redoc.urls")),
 
-    # path('', SpectacularAPIView.as_view(), name='schema'),
-    # path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema')),
-
     path('refresh/', TokenRefreshView.as_view()),
     path('api/', include('users.urls')),
     path('api/', include('ads.urls')),
